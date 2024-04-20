@@ -1,5 +1,7 @@
 # terraform-was-vpcb5
 
+Create main.tf file and input following
+
 
 ```hcl
 module "vpc" {
@@ -11,5 +13,18 @@ module "vpc" {
     subnet3_cidr = "10.0.3.0/24"
     ip_on_launch = true
     instance_type = "t2.micro"
+    subnet1_name = "hello1"
+    subnet2_name = "hello2"
+    subnet3_name = "hello3"
 }
+```
+
+Create apache.sh file and input a script. Eg.
+```hcl
+#!/bin/bash
+
+sudo apt update 
+sudo apt install apache2 -y
+sudo systemctl start apache2
+sudo systemctl enable apache2 
 ```

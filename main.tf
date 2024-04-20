@@ -13,7 +13,7 @@ resource "aws_subnet" "main" {
   availability_zone = "${var.region}a"
 
   tags = {
-    Name = "subnet1"
+    Name = var.subnet1_name
   }
 }
 resource "aws_subnet" "main2" {
@@ -23,7 +23,7 @@ resource "aws_subnet" "main2" {
   availability_zone = "${var.region}b"
 
   tags = {
-    Name = "subnet2"
+    Name = var.subnet2_name
   }
 }
 resource "aws_subnet" "main3" {
@@ -33,7 +33,7 @@ resource "aws_subnet" "main3" {
   availability_zone = "${var.region}c"
 
   tags = {
-    Name = "subnet3"
+    Name = var.subnet3_name
   }
 }
 
